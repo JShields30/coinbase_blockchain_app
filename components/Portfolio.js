@@ -21,3 +21,7 @@ const PortfolioTable = styled.div`
     margin-top: 1rem;
     border: 1px solid #282b2f;
 `
+
+const Table = styled.div`
+    width: 100%;
+`
