@@ -4,4 +4,10 @@ const Portfolio = () => {
   return <div></div>;
 };
 
-export default Portfolio;
+export default Portfolio
+
+const Wrapper = styled.div`
+    flex: 1;
+    display: flex;
+    justify-content: center;
+`
