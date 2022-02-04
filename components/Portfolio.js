@@ -11,3 +11,9 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
 `
+
+const Content = styled.div`
+    width: 100%;
+    max-width: 1000px;
+    padding: 2rem 1rem;
+`
