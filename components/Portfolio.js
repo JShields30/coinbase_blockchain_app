@@ -17,3 +17,7 @@ const Content = styled.div`
     max-width: 1000px;
     padding: 2rem 1rem;
 `
+const PortfolioTable = styled.div`
+    margin-top: 1rem;
+    border: 1px solid #282b2f;
+`
