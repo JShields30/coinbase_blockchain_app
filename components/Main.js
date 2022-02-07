@@ -1,5 +1,6 @@
 import React from 'react';
 import Portfolio from './Portfolio';
+import styled from 'styled-components';
 
 const Main = () => {
   return <Wrapper>
