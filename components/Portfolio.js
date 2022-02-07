@@ -1,7 +1,12 @@
 import React from 'react';
 
 const Portfolio = () => {
-  return <div></div>;
+  return <PortfolioTable>
+      <TableItem>
+          <Title>Your Assets</Title>
+      </TableItem>
+  </PortfolioTable>
+
 };
 
 export default Portfolio
