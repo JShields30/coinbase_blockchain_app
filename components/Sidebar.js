@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import CoinBaseLogo from '../assets/cb-logo.png';
+import CoinbaseLogo from '../assets/cb-logo.png';
+import Image from 'next/dist/client/image';
 
 const Sidebar = () => {
   return <Wrapper>
       <LogoContainer>
           <Logo>
-              <Image src={CoinBaseLogo} alt='Coinbase Logo' />
+              <Image src={CoinbaseLogo} alt='Coinbase Logo' />
           </Logo>
       </LogoContainer>
   </Wrapper>
