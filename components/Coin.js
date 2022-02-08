@@ -2,11 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { BsThreeDotsVertical } from 'react-icons/bs'
+import { coins } from '../static/coins';
 
 
 
-export const Coin = () => {
-  return <div></div>;
+export const Coin = ({coin}) => {
+  return <Wrapper>
+      <div>
+          <div style={{flex: 3}}>
+            <NameCol>
+                <CoinIcon>
+                    <Image src={coin.logo} alt={coins.name} />
+                </CoinIcon>
+            </NameCol>
+          </div>
+      </div>
+  </Wrapper>
 };
 
 const Wrapper = styled.div`
