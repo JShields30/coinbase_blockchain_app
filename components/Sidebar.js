@@ -2,15 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import CoinbaseLogo from '../assets/cb-logo.png';
 import Image from 'next/dist/client/image';
+import { navItems } from '../static/navItems'
+
 
 const Sidebar = () => {
-  return <Wrapper>
+  return ( 
+  <Wrapper>
       <LogoContainer>
           <Logo>
               <Image src={CoinbaseLogo} alt='Coinbase Logo' />
           </Logo>
       </LogoContainer>
+      <NavItemsContainer>
+          {navItems.map((item, index) => (
+              <NavItem key={index}>
+                  <NavIcon>{item.icon}</NavIcon>
+                  <NavTitle>{item.title}</NavTitle>
+              </NavItem>
+          ))}
+      </NavItemsContainer>
   </Wrapper>
+  )
 };
 
 export default Sidebar;
@@ -57,4 +69,8 @@ const NavIcon = styled.div`
     margin: 0 1rem;
     display: grid;
     place-items: center;
+`
+
+const NavTitle = styled.div`
+
 `
