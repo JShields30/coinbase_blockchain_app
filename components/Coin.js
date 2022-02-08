@@ -47,6 +47,8 @@ export const Coin = ({ coin }) => {
 	);
 };
 
+export default Coin
+
 const Wrapper = styled.div`
 	display: flex;
 	width: 100%;
