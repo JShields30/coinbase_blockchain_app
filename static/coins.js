@@ -66,4 +66,14 @@ export const coins = [
     change: 200.24,
     allocation: 17.89,
   },
+  // {
+  //   name: 'WCD Token',
+  //   sign: 'WCD',
+  //   logo: ethLogo,
+  //   balanceUsd: 300,
+  //   balanceCoin: 6.35664236,
+  //   priceUsd: 9.22,
+  //   change: 25.24,
+  //   allocation: 17.89,
+  // },
 ]
