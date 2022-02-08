@@ -1,8 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import CoinBaseLogo from '../assets/cb-logo.png';
 
 const Sidebar = () => {
-  return <div></div>;
+  return <Wrapper>
+      <LogoContainer>
+          <Logo>
+              <Image src={CoinBaseLogo} alt='Coinbase Logo' />
+          </Logo>
+      </LogoContainer>
+  </Wrapper>
 };
 
 export default Sidebar;
