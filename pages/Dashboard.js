@@ -41,8 +41,14 @@ const Dashboard = ({ address }) => {
       <Wrapper>
           <Sidebar />
           <MainContainer>
-              <Header walletAddress={address} sanityTokens={sanityTokens} />
-              <Main />
+              <Header 
+              walletAddress={address} 
+              sanityTokens={sanityTokens} 
+              thirdWebTokens={thirdWebTokens} />
+              <Main 
+                 walletAddress={address} 
+                 sanityTokens={sanityTokens} 
+                 thirdWebTokens={thirdWebTokens} />
           </MainContainer>
       </Wrapper>
   )
