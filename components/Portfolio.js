@@ -6,7 +6,10 @@ import { Coin } from './Coin';
 import BalanceChart from './BalanceChart';
 
 
-const Portfolio = () => {
+const Portfolio = ({ thirdWebTokens, sanityTokens, walletAddress }) => {
+    console.log(thirdWebTokens, '🔖' )
+    console.log(sanityTokens)
+    console.log(walletAddress)
   return (
   <Wrapper>
       <Content>
