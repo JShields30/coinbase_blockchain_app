@@ -26,8 +26,8 @@ export default createSchema({
           type: 'string',
         },
         {
-          titLe: 'Contact Address',
-          name: 'contactAddress',
+          titLe: 'Contract Address',
+          name: 'contractAddress',
           type: 'string',
         },
         {
