@@ -13,7 +13,7 @@ const Portfolio = ({ thirdWebTokens, sanityTokens, walletAddress }) => {
     for (const token of sanityTokens) {
         tokenToUSD[token.contractAddress] = Number(token.usdPrice)
     }
-    
+
 useEffect(() => {
     const calculateTotalBalance = async () => {
         const totalBalance = await Promise.all(
@@ -27,8 +27,8 @@ useEffect(() => {
 
    return calculateTotalBalance()
 
-}, [])
-/// Convert Tokens into USD 
+}, [thirdWebTokens, sanityTokens])
+
   return (
   <Wrapper>
       <Content>
