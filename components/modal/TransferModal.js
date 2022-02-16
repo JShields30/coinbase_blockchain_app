@@ -21,3 +21,24 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
 `
+
+const Selector = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5rem;
+`
+
+const Option = styled.div`
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #111214;
+    }
+`
