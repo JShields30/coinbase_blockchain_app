@@ -10,7 +10,7 @@ Modal.setAppElement('#__next');
 const Header = ({ walletAddress, connectWallet }) => {
 	const router = useRouter();
 
-    const cutomStyles ={
+    const customStyles ={
         content: {
             top: '50%',
             left: '50%',
@@ -46,6 +46,7 @@ const Header = ({ walletAddress, connectWallet }) => {
 			<Modal
 				isOpen={!!router.query.transfer}
 				onRequestClose={() => router.push('/')}
+                style={customStyles}
 			>
                 <TransferModal />
             </Modal>
