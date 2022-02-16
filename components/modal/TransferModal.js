@@ -5,8 +5,12 @@ import styled from 'styled-components'
 const TransferModal = () => {
   return (
     <Wrapper>
-        <p>Send</p>
+      <Selector>
+          <Option>
+          <p>Send</p>
         <p>Recieve</p>
+          </Option>
+      </Selector>
     </Wrapper>
   )
 }
