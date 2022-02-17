@@ -35,6 +35,9 @@ const selectedModal = option => {
             <p>Recieve</p>
           </Option>
       </Selector>
+      <ModalMain>
+          {selectedModal(action)}
+      </ModalMain>
     </Wrapper>
   )
 }
