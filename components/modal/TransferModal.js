@@ -16,11 +16,11 @@ const unselectedStyle = {
   return (
   <Wrapper>
       <Selector>
-          <Option style={ selectedStyle } onClick={() => setAction('send')}>
+          <Option style={action === 'send' ? selectedStyle : unselectedStyle} onClick={() => setAction('send')}>
             <p>Send</p>
             </Option>
 
-          <Option style={ unselectedStyle } onClick={() => setAction('recieve')}>
+          <Option style={action === 'receive' ? selectedStyle : unselectedStyle } onClick={() => setAction('receive')}>
             <p>Recieve</p>
           </Option>
       </Selector>
