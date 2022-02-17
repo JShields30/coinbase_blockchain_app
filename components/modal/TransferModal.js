@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
+import Transfer from './Transfer';
 
 
 const TransferModal = () => {
@@ -16,7 +17,7 @@ const unselectedStyle = {
 const selectedModal = option => {
   switch (option) {
     case 'send':
-      return <h2>send</h2>
+      return <Transfer />
     case 'receive':
       return <h2>receive</h2>
     default: 
@@ -77,3 +78,4 @@ const ModalMain = styled.div`
   padding: 1rem;
   flex: 1;
 `
+
