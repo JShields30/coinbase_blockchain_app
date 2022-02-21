@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const Transfer = () => {
+    const [amount, setAmount] = useState()
+
   return (
      <Wrapper>
       <Amount>
           <FlexInputContainer>
-              <FlexInput placeholder='0' type='number' />
+              <FlexInput 
+              placeholder='0' 
+              type='number' 
+              value={amount} 
+              onChange={e => setAmount(e.target.value)} 
+              />
               <span>ETH</span>
           </FlexInputContainer>
-          <Warning style={{ color: '' && '#0a0b0d' }}>Amount is a required field</Warning>
+          <Warning style={{ color: amount && '#0a0b0d' }}>Amount is a required field</Warning>
       </Amount>
      </Wrapper>
   )
@@ -23,7 +30,6 @@ const Wrapper = styled.div`
     height: 100%;
     flex: 1;
 `
-
 const Amount = styled.div`
     flex: 1;
     display: flex;
@@ -41,13 +47,13 @@ const FlexInputContainer = styled.div`
     }
 `
 
-const FlexInput = styled.div`
+const FlexInput = styled.input`
     border: none;
     background: none;
     outline: none;
     color: white;
     font-size: 1.2rem;
-    text-wrap: wrap;
+    text-wrap: wrap; 
     text-align: right;
     max-width: 45%;
     margin-right: 1rem;
