@@ -71,3 +71,19 @@ const Warning = styled.div`
     text-align: center;
     color: #8a919e;
 `
+
+const Divider = styled.div`
+    border-bottom: 1px solid #282b2f;
+`
+const Rows = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #8a919e;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+`
+const FieldName = styled.div`
+    flex: 0.5;
+    padding-left: 2rem;
+`
