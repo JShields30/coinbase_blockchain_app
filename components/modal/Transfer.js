@@ -112,3 +112,38 @@ const Recipient = styled.input`
     text-wrap: wrap;
     margin-right: 0.5rem;
 `
+const CoinSelectList = styled.div`
+    display: flex;
+    flex: 1.3;
+    height: 100%;
+
+    &:hover  {
+        cursor: pointer;
+    }
+`
+
+const CoinName = styled.div`
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 1.2rem;
+    text-wrap: wrap;
+    margin-right: 0.5rem;
+`
+
+const Continue = styled.button`
+    color: white;
+    width: 100%;
+    background-color: #3773f5;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #4a80f6;
+    }
+`
