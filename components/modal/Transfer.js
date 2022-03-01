@@ -87,3 +87,28 @@ const FieldName = styled.div`
     flex: 0.5;
     padding-left: 2rem;
 `
+const Icon = styled.div`
+    margin-right: 1rem;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+
+    & > img {
+        height: 120%;
+        width: 120%;
+        object-fit: cover;
+    }
+`
+const Recipient = styled.input`
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 1.2rem;
+    text-wrap: wrap;
+    margin-right: 0.5rem;
+`
