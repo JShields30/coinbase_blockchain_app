@@ -18,6 +18,11 @@ const Transfer = () => {
           </FlexInputContainer>
           <Warning style={{ color: amount && '#0a0b0d' }}>Amount is a required field</Warning>
       </Amount>
+      <TransferForm>
+          <Row>
+            <FieldName>To</FieldName>
+          </Row>
+      </TransferForm>
      </Wrapper>
   )
 }
@@ -75,7 +80,11 @@ const Warning = styled.div`
 const Divider = styled.div`
     border-bottom: 1px solid #282b2f;
 `
-const Rows = styled.div`
+const TransferForm = styled.div`
+    border: 1px solid #282b2f;
+    border-radius: 0.4rem;
+`
+const Row = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
