@@ -3,9 +3,11 @@ import styled from 'styled-components'
 import Transfer from './Transfer';
 
 
-const TransferModal = () => {
+const TransferModal = ({ sanityTokens }) => {
 const [action, setAction] = useState('send')
 const [selectedToken, setSelectedToken] = useState(sanityTokens[0])
+
+console.log(sanityTokens)
 
 const selectedStyle = {
     color: '#3773f5',
@@ -18,7 +20,7 @@ const unselectedStyle = {
 const selectedModal = option => {
   switch (option) {
     case 'send':
-      return <Transfer />
+      return <Transfer selectedToken={selectedToken}/>
     case 'receive':
       return <h2>receive</h2>
     default: 
