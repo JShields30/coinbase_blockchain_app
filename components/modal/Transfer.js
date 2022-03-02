@@ -183,3 +183,5 @@ const Continue = styled.button`
     }
 `
 const BalanceTitle = styled.div``
+
+const Balance =styled.div``
