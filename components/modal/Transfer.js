@@ -35,9 +35,17 @@ const Transfer = () => {
           <Divider />
           <Row>
               <FieldName>Pay with</FieldName>
-              <CoinSelectList></CoinSelectList>
+              <CoinSelectList>
+                  <Icon>
+                      <img src='https://images.unsplash.com/photo-1621416894569-0f39ed31d247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJpdGNvaW58ZW58MHx8MHx8&w=1000&q=80' alt='' />
+                  </Icon>
+                  <CoinName>Ethereum</CoinName>
+              </CoinSelectList>
           </Row>
       </TransferForm>
+      <Row>
+          <Continue>Continue</Continue>
+      </Row>
      </Wrapper>
   )
 }
