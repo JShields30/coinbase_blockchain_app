@@ -29,6 +29,10 @@ const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) =
             const balance = await activeThirdWebToken.balanceOf(walletAddress)
             setBalance(balance.displayValue)
         }
+
+        if (activeThirdWebToken) {
+            getBalance()
+        }
     }, [activeThirdWebToken])
 
   return (
