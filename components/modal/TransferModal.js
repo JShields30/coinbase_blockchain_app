@@ -1,9 +1,10 @@
+import { getJsonWalletAddress } from 'ethers/lib/utils';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import Transfer from './Transfer';
 
 
-const TransferModal = ({ sanityTokens }) => {
+const TransferModal = ({ sanityTokens, thirdWebTokens, walletAddress }) => {
 const [action, setAction] = useState('send')
 const [selectedToken, setSelectedToken] = useState(sanityTokens[0])
 
@@ -20,7 +21,14 @@ const unselectedStyle = {
 const selectedModal = option => {
   switch (option) {
     case 'send':
-      return <Transfer selectedToken={selectedToken}/>
+      return (
+      <Transfer 
+      selectedToken={selectedToken}
+      setAction={setAction} 
+      thirdWebTokens={thirdWebTokens}
+      walletAddress={walletAddress} 
+      />
+      )
     case 'receive':
       return <h2>receive</h2>
     default: 
