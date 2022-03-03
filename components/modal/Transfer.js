@@ -9,6 +9,7 @@ const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) =
     const [recipient, setRecipient] = useState('')
     const [imageUrl, setImageUrl] = useState(null)
     const [activeThirdWebToken, setActiveThirdWebToken] = useState()
+    const [balance, setBalance] = useState('Fetching...')
 
     useEffect(() => {
         const activeToken = thirdWebTokens.find(
@@ -22,6 +23,13 @@ const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) =
         const url = imageUrlBuilder(client).image(selectedToken.logo).url()
         setImageUrl(url)
     }, [selectedToken])
+
+    useEffect(() => {
+        const getBalance = async () => {
+            const balance = await activeThirdWebToken.balanceOf(walletAddress)
+            setBalance(balance.displayValue)
+        }
+    }, [activeThirdWebToken])
 
   return (
      <Wrapper>
@@ -64,7 +72,7 @@ const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) =
           <Continue>Continue</Continue>
       </Row>
       <Row>
-          <BalanceTitle>{selectedToken.symbol}</BalanceTitle>
+          <BalanceTitle>{selectedToken.symbol} Balance</BalanceTitle>
           <Balance>1.2 {selectedToken.symbol}</Balance>
       </Row>
      </Wrapper>
