@@ -8,6 +8,7 @@ const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) =
     const [amount, setAmount] = useState()
     const [recipient, setRecipient] = useState('')
     const [imageUrl, setImageUrl] = useState(null)
+    const [activeThirdWebToken, setActiveThirdWebToken] = useState()
 
     useEffect(() => {
         console.log(selectedToken, '🔥')
