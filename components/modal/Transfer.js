@@ -13,7 +13,8 @@ const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) =
     useEffect(() => {
         const activeToken = thirdWebTokens.find(
             token => token.address === selectedToken.contractAddress)
-            console.log(activeToken, 'hahehe')
+   
+            setActiveThirdWebToken(activeToken)
     }, [thirdWebTokens, selectedToken])
 
     useEffect(() => {
@@ -55,7 +56,7 @@ const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) =
                   <Icon>
                       <img src={imageUrl} />
                   </Icon>
-                  <CoinName>Ethereum</CoinName>
+                  <CoinName>{selectedToken}</CoinName>
               </CoinSelectList>
           </Row>
       </TransferForm>
