@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { FaWallet } from 'react-icons/fa'
+import imageUrlBuilder from '@sanity/image-url'
+import { client } from '../../lib/sanity'
 
 const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) => {
     const [amount, setAmount] = useState()
     const [recipient, setRecipient] = useState()
 
     useEffect(() => {
-        console.log(selectedToken)
+        console.log(selectedToken, '🔥333')
     }, [])
 
   return (
