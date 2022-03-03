@@ -6,10 +6,13 @@ import { client } from '../../lib/sanity'
 
 const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) => {
     const [amount, setAmount] = useState()
-    const [recipient, setRecipient] = useState()
+    const [recipient, setRecipient] = useState('')
+    const [imageUrl, setImageUrl] = useState(null)
 
     useEffect(() => {
-        console.log(selectedToken, '🔥333')
+        console.log(selectedToken, '🔥')
+        const url = imageUrlBuilder(client).image(selectedToken.logo).url()
+        setImageUrl(url)
     }, [])
 
   return (
@@ -43,7 +46,7 @@ const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) =
               <FieldName>Pay with</FieldName>
               <CoinSelectList>
                   <Icon>
-                      <img src='https://images.unsplash.com/photo-1621416894569-0f39ed31d247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJpdGNvaW58ZW58MHx8MHx8&w=1000&q=80' alt='' />
+                      <img src={imageUrl} />
                   </Icon>
                   <CoinName>Ethereum</CoinName>
               </CoinSelectList>
