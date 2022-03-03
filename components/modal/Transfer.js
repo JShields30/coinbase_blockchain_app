@@ -56,7 +56,7 @@ const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) =
                   <Icon>
                       <img src={imageUrl} />
                   </Icon>
-                  <CoinName>{selectedToken}</CoinName>
+                  <CoinName>{selectedToken.symbol}</CoinName>
               </CoinSelectList>
           </Row>
       </TransferForm>
