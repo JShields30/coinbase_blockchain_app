@@ -28,13 +28,24 @@ const Transfer = ({ selectedToken, setAction, thirdWebTokens, walletAddress }) =
         const getBalance = async () => {
             const balance = await activeThirdWebToken.balanceOf(walletAddress)
             setBalance(balance.displayValue)
-            console.log(balance.displayValue)
         }
 
         if (activeThirdWebToken) {
             getBalance()
         }
     }, [activeThirdWebToken])
+
+    const sendCrypto = async () => {
+        console.log('sending crypto...')
+
+        if (activeThirdWebToken && amount && recipient){
+            const tx = await activeThirdWebToken.transfer(
+                recipient, 
+                amount.toString().concat('000000000000000000'))
+        }
+        console.log(tx)
+        setAction('transferred')
+    }
 
   return (
      <Wrapper>
