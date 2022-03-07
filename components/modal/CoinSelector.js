@@ -10,7 +10,7 @@ const CoinSelector = (
         thirdWebTokens,
         walletAddress,
     }) => {
-  return <h2>HEYO</h2>
+  return <h2>HEYO {walletAddress}</h2>
 }
 
 export default CoinSelector
