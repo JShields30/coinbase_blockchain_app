@@ -10,7 +10,16 @@ const CoinSelector = (
         thirdWebTokens,
         walletAddress,
     }) => {
-  return <h2>HEYO {walletAddress}</h2>
+  return (
+      <Wrapper>
+          <Title>Select Asset</Title>
+          <CoinList>
+              {sanityTokens.map(token => (
+                  <h2>{token.name}</h2>
+              ))}
+          </CoinList>
+      </Wrapper>
+  )
 }
 
 export default CoinSelector
