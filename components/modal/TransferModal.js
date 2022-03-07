@@ -2,6 +2,7 @@ import { getJsonWalletAddress } from 'ethers/lib/utils';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import Transfer from './Transfer';
+import CoinSelector from './CoinSelector';
 
 
 const TransferModal = ({ sanityTokens, thirdWebTokens, walletAddress }) => {
