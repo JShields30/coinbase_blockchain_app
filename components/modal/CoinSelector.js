@@ -3,12 +3,14 @@ import styled from "styled-components"
 
 const CoinSelector = (
     {
-        
-    }
-    ) => {
-  return (
-    <div>CoinSelector</div>
-  )
+        setAction,
+        selectedToken,
+        setSelectedToken,
+        sanityTokens,
+        thirdWebTokens,
+        walletAddress,
+    }) => {
+  return <h2>HEYO</h2>
 }
 
 export default CoinSelector
