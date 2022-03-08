@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder'
+import imageUrlBuilder from '@sanity/image-url'
 import { client } from '../../lib/sanity'
 import { FaCheck } from 'react-icons/fa'
 
@@ -27,18 +27,29 @@ const CoinItem = ({
                 }
             })
 
-            const Balance = await activeThirdWebToken.balanceOf(sender)
+            const balance = await activeThirdWebToken.balanceOf(sender)
 
             return await setBalance(balance.displayValue.split('.')[0])
         }
-
-    })
+        const getImgUrl = async () => {
+            const imgUrl = imageUrlBuilder(client).image(token.logo).url()
+            setImageUrl(imgUrl)
+        }
+        getImgUrl()
+        getBalance()
+    }, [])
 
   return (
-    <Wrapper>
+    <Wrapper style={{backgroundColor: selectedToken.name === token.name && '#141519',
+    }}
+    onClick={() => {
+        setSelectedToken(token)
+        setAction('send')
+    }}
+    >
         <Main>
             <Icon>
-                {/* <img src='' alt='' /> */}
+                <img src={imageUrl} alt='' />
             </Icon>
         </Main>
     </Wrapper>
