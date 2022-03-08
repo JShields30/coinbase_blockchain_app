@@ -33,7 +33,8 @@ const selectedModal = option => {
     case 'receive':
       return <h2>receive</h2>
       case 'select':
-        return <CoinSelector 
+        return (
+        <CoinSelector 
           setAction={setAction}
           selectedToken={selectedToken}
           setSelectedToken={setSelectedToken}
@@ -41,6 +42,11 @@ const selectedModal = option => {
           thirdWebTokens={thirdWebTokens}
           walletAddress={walletAddress}
         />
+        )
+        case 'transferring':
+          return <h2>transferring...</h2>
+        case 'transferred': 
+        return <h2 style={{ color: 'green' }}>Transfer Complete</h2>
     default: 
       return <h2>send</h2>
   }
