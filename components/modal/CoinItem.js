@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 const CoinItem = ({
@@ -14,6 +14,21 @@ const CoinItem = ({
     const [balance, setBalance] = useState('Fetching...')
     const [imageUrl, setImageUrl] =useState(null)
 
+    useEffect(() => {
+        const getBalance = async () => {
+            let activeThirdWebToken
+
+            thirdWebTokens.map(thirdWebtoken => {
+                if (thirdWebtoken.address === token.contractAddress) {
+                    activeThirdWebToken = thirdWebtoken
+                }
+            })
+
+            const Balance = await activeThirdWebToken.balanceOf(sender)
+
+            return await setBalance(balance.displayValue.split('.')[0])
+        }
+    })
 
   return (
     <Wrapper>
