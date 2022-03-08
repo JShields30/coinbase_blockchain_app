@@ -10,12 +10,35 @@ const CoinItem = ({
     sanityTokens,
     thirdWebTokens,
 }) => {
+
+    const [balance, setBalance] = useState('Fetching...')
+    const [imageUrl, setImageUrl] =useState(null)
+
+
   return (
-    <div>{sanityTokens[0].symbol}</div>
+    <Wrapper>
+        <Main>
+            <Icon>
+                {/* <img src='' alt='' /> */}
+            </Icon>
+        </Main>
+    </Wrapper>
   )
 }
 
 export default CoinItem
+
+const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.3rem;
+
+    &:hover {
+        background-color: #0e0f14;
+    }
+`
 
 const Main = styled.div`
     flex: 1;
