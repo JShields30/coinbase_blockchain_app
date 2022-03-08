@@ -56,6 +56,9 @@ const CoinItem = ({
                 <Symbol>{token.symbol}</Symbol>
             </NameDetails>
         </Main>
+        <Balance>
+            {balance} {token.symbol}
+        </Balance>
     </Wrapper>
   )
 }
