@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder'
+import { client } from '../../lib/sanity'
+import { FaCheck } from 'react-icons/fa'
 
 const CoinItem = ({
     token,
@@ -28,6 +31,7 @@ const CoinItem = ({
 
             return await setBalance(balance.displayValue.split('.')[0])
         }
+
     })
 
   return (
