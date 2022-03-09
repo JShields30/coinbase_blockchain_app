@@ -45,7 +45,14 @@ const selectedModal = option => {
         />
         )
         case 'transferring':
-          return <h2>transferring...</h2>
+          return <div><h2>Transferring...</h2>
+                      <TailSpin
+                        height='100'
+                        width='100'
+                        color='grey'
+                        ariaLabel='loading'
+                        />
+                      </div>
         case 'transferred': 
         return <h2 style={{ color: 'green' }}>Transfer Complete</h2>
     default: 
