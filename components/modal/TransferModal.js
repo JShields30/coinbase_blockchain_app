@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import Transfer from './Transfer';
 import CoinSelector from './CoinSelector';
+import { TailSpin } from 'react-loader-spinner'
 
 
 const TransferModal = ({ sanityTokens, thirdWebTokens, walletAddress }) => {
