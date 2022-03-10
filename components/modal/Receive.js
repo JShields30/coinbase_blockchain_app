@@ -7,6 +7,9 @@ import { FaCheck } from 'react-icons/fa'
 
 
 const Receive = () => {
+    const [imageUrl, setImageUrl] = useState(null)
+    const [copied, setCopied] = useState(false)
+
   return (
     <div>Receive</div>
   )
