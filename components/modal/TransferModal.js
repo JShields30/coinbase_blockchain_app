@@ -52,7 +52,7 @@ const selectedModal = option => {
               justifyContent: 'center',
               alignItems: 'center',
               fontSize: '1.5rem',
-          }}>Transfer in progress..
+          }}><h2>Transfer in progress...</h2>
                       <TailSpin
                         height='100'
                         width='100'
