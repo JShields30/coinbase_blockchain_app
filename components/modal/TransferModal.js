@@ -52,7 +52,7 @@ const selectedModal = option => {
               justifyContent: 'center',
               alignItems: 'center',
               fontSize: '1.5rem',
-          }}><h2>Transferring...</h2>
+          }}>Transfer in progress..
                       <TailSpin
                         height='100'
                         width='100'
@@ -71,7 +71,7 @@ const selectedModal = option => {
             fontWeight: '600',
             color: '#27ad75'
         }}
-        ></div>
+        >Transfer Complete</div>
     default: 
       return <h2>send</h2>
   }
