@@ -10,6 +10,11 @@ const Receive = () => {
     const [imageUrl, setImageUrl] = useState(null)
     const [copied, setCopied] = useState(false)
 
+    useEffect(() => {
+        const url = builder.image(selectedToken.logo).url()
+        setImageUrl(url)
+    }, [selectedToken])
+
   return (
     <div>Receive</div>
   )
