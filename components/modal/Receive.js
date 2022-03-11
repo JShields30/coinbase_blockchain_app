@@ -6,7 +6,7 @@ import { BiCopy } from 'react-icons/bi'
 import { FaCheck } from 'react-icons/fa'
 
 
-const Receive = () => {
+const Receive = ({ setAction, selectedToken, walletAddress }) => {
     const [imageUrl, setImageUrl] = useState(null)
     const [copied, setCopied] = useState(false)
 
