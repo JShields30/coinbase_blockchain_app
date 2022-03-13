@@ -1,13 +1,4 @@
 This is mock Coinbase Wallet App using Next.js, ThirdWeb, & Sanity
 
-## Getting Started
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://coinbase-blockchain-app-gules.vercel.app/
 
